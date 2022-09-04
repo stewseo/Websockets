@@ -1,0 +1,10 @@
+plugins {
+    id "com.gradle.enterprise" version "3.11.1"
+}
+gradleEnterprise {
+    server = "https://gradle-enterprise.mycompany.com"
+}
+//rootProject.name = 'SpringWebsocketDemo'
+include 'javalin-websocket'
+include 'spring-websocket'
+
