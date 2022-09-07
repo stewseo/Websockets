@@ -38,17 +38,17 @@ public class ServerWebSocketHandler extends TextWebSocketHandler implements SubP
         sessions.remove(session);
     }
 
-//    @Scheduled(fixedRate = 11000)
-//    void sendPeriodicMessages() throws IOException {
-//
-//        for (WebSocketSession session : sessions) {
-//            if (session.isOpen()) {
-//                String broadcast = "server periodic message every 11 seconds " + LocalTime.now();
-//                logger.info("Server sends: {}", broadcast);
-//                session.sendMessage(new TextMessage(broadcast));
-//            }
-//        }
-//    }
+    @Scheduled(fixedRate = 11000)
+    void sendPeriodicMessages() throws IOException {
+
+        for (WebSocketSession session : sessions) {
+            if (session.isOpen()) {
+                String broadcast = "server periodic message every 11 seconds " + LocalTime.now();
+                logger.info("Server sends: {}", broadcast);
+                session.sendMessage(new TextMessage(broadcast));
+            }
+        }
+    }
 
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {

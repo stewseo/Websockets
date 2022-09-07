@@ -46,7 +46,7 @@ heroku {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'org.example.Chat'
+        attributes 'Main-Class': 'org.example.javalinWebsocket.Chat'
     }
 }
 test {
