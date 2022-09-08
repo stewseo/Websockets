@@ -1,14 +1,14 @@
-Connect to ws://localhost:8080/websocket and send test message using Postman desktop app on local network.
+#### Connect to ws://localhost:8080/websocket and send test message using Postman desktop app on local network.
 
-Parse SpringBoot/Java plain-text and json logs logger.level: trace, debug, info
-Monitor and collect logs located at path: $PROJECT_HOME/spring-websocket/logs/* 
+#### Parse SpringBoot/Java plain-text and json logs logger.level: trace, debug, and info<br/>
+#### Monitor and collect logs located at path: $PROJECT_HOME/spring-websocket/logs/* 
 
-Ship data to aws cluster running Elasticsearch Service
+#### Ship data to aws cluster running Elasticsearch Service
 - Load index templates: filebeat-*
 - Load default dashboards:
 - Ingest default pipelines: 
 
-Create visualizations
+#### Create visualizations
 - Discover dashboard filter: spring-boot-websocket-ecs.json
 - viewing field statistics: log.logger and process.thread.name
 
