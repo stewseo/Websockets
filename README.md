@@ -5,8 +5,8 @@
 
 #### Ship data to aws cluster running Elasticsearch Service
 - Load index templates: filebeat-*
-- Load default dashboards:
-- Ingest default pipelines: 
+- Load dashboards 
+- Ingest pipelines 
 
 #### Create visualizations
 - Discover: spring-boot-websocket-ecs.json
@@ -17,3 +17,5 @@
 - Creating a new visualization panel
 
 ![creating_spring-websocket_visualization](https://user-images.githubusercontent.com/54422342/189037901-58ad6c3d-9060-4c21-bea5-3e85e1f50585.jpg)
+
+
