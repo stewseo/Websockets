@@ -9,7 +9,7 @@
 - Ingest default pipelines: 
 
 #### Create visualizations
-- Discover dashboard filter: spring-boot-websocket-ecs.json
+- Discover: spring-boot-websocket-ecs.json
 - viewing field statistics: log.logger and process.thread.name
 
 ![field_statistics](https://user-images.githubusercontent.com/54422342/189035703-f0e67e70-4a84-48e5-80f8-fdb2ad88982d.jpg)
