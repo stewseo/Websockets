@@ -14,6 +14,7 @@ viewing field statistics: log.logger and process.thread.name
 
 
 
-Creating a new visualization panel with fields: log.level and log.logger
 
-![spring-websocket_all-fields_ES-Discover](https://user-images.githubusercontent.com/54422342/189035827-0b504c42-0baf-4ad8-a573-f455b3036c40.jpg)
+Creating a new visualization panel
+
+![creating_spring-websocket_visualization](https://user-images.githubusercontent.com/54422342/189037901-58ad6c3d-9060-4c21-bea5-3e85e1f50585.jpg)
