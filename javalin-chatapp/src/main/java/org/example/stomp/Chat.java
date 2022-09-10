@@ -1,4 +1,4 @@
-package org.example.javalinWebsocket;
+package org.example.stomp;
 
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;

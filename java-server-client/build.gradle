@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    logbackVersion = '1.4.0'
+    testContainersVersion = "1.17.3"
+    elasticSearchVersion  = "8.4.1"
+    jUnitVersion = "5.9.0"
+}
+// TODO: dependency management:
+//  java-conventions in buildSrc directory with groovy plugin,
+//  /shared directory with shared.jar with shadowJar or gradle task, author gradle plugin
+dependencies {
+    implementation "ch.qos.logback:logback-core:${logbackVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}",
+            "ch.qos.logback:logback-access:${logbackVersion}",
+            "net.logstash.logback:logstash-logback-encoder:7.2",
+            "co.elastic.logging:logback-ecs-encoder:1.5.0"
+
+    implementation 'co.elastic.clients:elasticsearch-java:8.4.1'
+
+    implementation 'jakarta.json:jakarta.json-api:2.1.1',
+            "com.fasterxml.jackson.core:jackson-databind:2.13.3",
+            "com.fasterxml.jackson.core:jackson-core:2.13.3"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}

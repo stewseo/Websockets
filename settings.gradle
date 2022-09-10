@@ -4,7 +4,6 @@ plugins {
 gradleEnterprise {
     server = "https://gradle-enterprise.mycompany.com"
 }
-//rootProject.name = 'SpringWebsocketDemo'
-include 'javalin-websocket'
-include 'spring-websocket'
+
+include 'java-server-client', 'spring-websocket', 'javalin-chatapp'
 

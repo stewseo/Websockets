@@ -3,7 +3,7 @@
     <!--<configuration debug="true">-->
 
     <!-- Define the filename for all persisted log files -->
-    <property name="LOG_FILE" value="logs/spring-boot-websocket"/>
+    <property name="LOG_FILE" value="java-server-client/logs/211sJavaSE"/>
 
     <!-- Configuration for logging to the console -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -35,10 +35,10 @@
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>TRACE</level>
+            <level>DEBUG</level>
         </filter>
         <encoder class="co.elastic.logging.logback.EcsEncoder">
-            <serviceName>SpringBootWebSocket</serviceName>
+            <serviceName>cs211</serviceName>
         </encoder>
     </appender>
 
