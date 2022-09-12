@@ -3,7 +3,7 @@
     <!--<configuration debug="true">-->
 
     <!-- Define the filename for all persisted log files -->
-    <property name="LOG_FILE" value="java-server-client/logs/211sJavaSE"/>
+    <property name="LOG_FILE" value="logs/211sJavaSE"/>
 
     <!-- Configuration for logging to the console -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -34,9 +34,9 @@
             <fileNamePattern>${LOG_FILE}-ecs.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>DEBUG</level>
-        </filter>
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>TRACE</level>-->
+<!--        </filter>-->
         <encoder class="co.elastic.logging.logback.EcsEncoder">
             <serviceName>cs211</serviceName>
         </encoder>
@@ -49,11 +49,11 @@
             <fileNamePattern>${LOG_FILE}.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>TRACE</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>TRACE</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>
                 <mdc/>

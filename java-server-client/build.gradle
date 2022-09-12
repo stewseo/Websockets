@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'org.game'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -15,9 +15,13 @@ ext {
     elasticSearchVersion  = "8.4.1"
     jUnitVersion = "5.9.0"
 }
-// TODO: dependency management:
-//  java-conventions in buildSrc directory with groovy plugin,
-//  /shared directory with shared.jar with shadowJar or gradle task, author gradle plugin
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.5.1'
+}
+
+task prepareKotlinBuildScriptModel {}
+
 dependencies {
     implementation "ch.qos.logback:logback-core:${logbackVersion}",
             "ch.qos.logback:logback-classic:${logbackVersion}",
@@ -25,12 +29,14 @@ dependencies {
             "net.logstash.logback:logstash-logback-encoder:7.2",
             "co.elastic.logging:logback-ecs-encoder:1.5.0"
 
+    implementation 'org.elasticsearch.client:elasticsearch-rest-client:8.4.1'
     implementation 'co.elastic.clients:elasticsearch-java:8.4.1'
 
-    implementation 'jakarta.json:jakarta.json-api:2.1.1',
-            "com.fasterxml.jackson.core:jackson-databind:2.13.3",
-            "com.fasterxml.jackson.core:jackson-core:2.13.3"
+    implementation 'jakarta.json:jakarta.json-api:2.0.1',
+            "com.fasterxml.jackson.core:jackson-databind:2.13.3", // serialize java beans to Json
+            "com.fasterxml.jackson.core:jackson-core:2.12.3"
 
+    testImplementation 'org.assertj:assertj-core:3.23.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 }

@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.heroku.sdk.heroku-gradle" version "2.0.0"
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+group 'org.game'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+application{
+    mainClass = 'org.example.Chat'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.5.1'
+}
+
+task prepareKotlinBuildScriptModel {}
+
+dependencies {
+
+    implementation 'ch.qos.logback:logback-classic:1.2.11',
+            'org.slf4j:slf4j-api:1.7.36',
+            'net.logstash.logback:logstash-logback-encoder:7.2',
+            "co.elastic.logging:logback-ecs-encoder:1.5.0"
+
+    implementation 'io.javalin:javalin:4.6.4'
+
+    implementation 'org.json:json:20220320',
+            'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+
+//    implementation "com.fasterxml.jackson.core:jackson-databind:2.10.3"
+    implementation 'com.j2html:j2html:1.6.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+heroku {
+    appName = "javelinWebsocket"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.stomp.Chat'
+    }
+}
+test {
+    useJUnitPlatform()
+}

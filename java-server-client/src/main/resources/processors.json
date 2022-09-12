@@ -1,0 +1,31 @@
+{
+  "processors": [
+    {
+      "grok": {
+        "description": "Extract fields from 'message'",
+        "field": "message",
+        "patterns": ["%{IPORHOST:source.ip} %{USER:user.id} %{USER:user.name} \\[%{HTTPDATE:@timestamp}\\] \"%{WORD:http.request.method} %{DATA:url.original} HTTP/%{NUMBER:http.version}\" %{NUMBER:http.response.status_code:int} (?:-|%{NUMBER:http.response.body.bytes:int}) %{QS:http.request.referrer} %{QS:user_agent}"]
+      }
+    },
+    {
+      "date": {
+        "description": "Format '@timestamp' as 'dd/MMM/yyyy:HH:mm:ss Z'",
+        "field": "@timestamp",
+        "formats": [ "dd/MMM/yyyy:HH:mm:ss Z" ]
+      }
+    },
+    {
+      "geoip": {
+        "description": "Add 'source.geo' GeoIP data for 'source.ip'",
+        "field": "source.ip",
+        "target_field": "source.geo"
+      }
+    },
+    {
+      "user_agent": {
+        "description": "Extract fields from 'user_agent'",
+        "field": "user_agent"
+      }
+    }
+  ]
+}
