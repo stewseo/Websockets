@@ -4,6 +4,8 @@ plugins {
 gradleEnterprise {
     server = "https://gradle-enterprise.mycompany.com"
 }
-
-include 'java-server-client', 'spring-websocket', 'javalin-chatapp'
+// TODO: dependency management:
+//  java-conventions in buildSrc directory with groovy plugin,
+//  /shared directory with shared.jar with shadowJar or gradle task, author gradle plugin
+include 'server-client', 'spring-boot-websocketHandler', 'javalin-chatApp'
 
