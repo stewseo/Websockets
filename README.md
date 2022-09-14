@@ -1,17 +1,20 @@
-#### Handle Client to Server messages with ServerSockets and build Requests for Api Manage
-https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
+#### Handle Client to Server messages with ServerSockets and build Requests
 
 
 #### Ship data to Elasticsearch cluster
+- filestream inputs: 
+    - $PROJECT_HOME/spring-boot-websocketHandler/logs/*
+    - $PROJECT_HOME/server-client/logs/*
 
 
-### Manage the stack in Java using Elasticsearch Clients
+#### Manage the stack in Java using Elasticsearch Clients
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
 
 
-### Search logs from data streams' backing indices and System indices
+#### Search logs from data streams' backing indices and System indices
 
 
-### Track Pipeline usage
+#### Track Pipeline usage
 
 
 #### Create visualizations
