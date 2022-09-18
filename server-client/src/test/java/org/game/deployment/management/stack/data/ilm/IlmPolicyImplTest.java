@@ -1,6 +1,6 @@
-package org.game.myDeployment.stackManagement.data.ilmPolicy;
+package org.game.deployment.stackManagement.data.ilmPolicy;
 
-import org.game.myDeployment.stackManagement.data.indexLifecyclePolicies.IlmPolicyHandler;
+import org.game.deployment.management.stack.data.ilm.IlmPolicyHandler;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

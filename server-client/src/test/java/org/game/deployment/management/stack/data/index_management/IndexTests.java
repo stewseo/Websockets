@@ -1,19 +1,18 @@
-package org.game.myDeployment.stackManagement.data.indexManagement;
+package org.game.deployment.stackManagement.data.indexManagement;
 
 import co.elastic.clients.elasticsearch._types.ExpandWildcard;
 import co.elastic.clients.elasticsearch.cat.CountResponse;
 import co.elastic.clients.elasticsearch.cat.indices.IndicesRecord;
 import co.elastic.clients.elasticsearch.core.GetResponse;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.game.deployment.management.stack.data.index_management.IndexHandler;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.game.myDeployment.stackManagement.data.indexManagement.IndexHandler.IndexId.DS_FILEBEAT_IDX;
 import static org.junit.jupiter.api.Assertions.*;
 
 // Test response from index api endpoint

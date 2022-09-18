@@ -1,10 +1,10 @@
-package org.game.myDeployment.stackManagement.data.indexManagement;
+package org.game.deployment.stackManagement.data.indexManagement;
 
-import co.elastic.clients.elasticsearch.core.IndexResponse;
 import co.elastic.clients.elasticsearch.indices.DataStream;
 import co.elastic.clients.elasticsearch.indices.DataStreamsStatsResponse;
 import co.elastic.clients.elasticsearch.indices.GetDataStreamResponse;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.game.deployment.management.stack.data.index_management.DataStreamHandler;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
