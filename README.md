@@ -1,3 +1,8 @@
+#### Ship data to Elasticsearch cluster
+- filestream inputs: 
+    - $PROJECT_HOME/spring-boot-websocketHandler/logs/*
+    - $PROJECT_HOME/server-client/logs/*
+
 #### submit indexing and search requests directly to the resource that stores append-only time series data across multiple indices.
 
 GetDataStreamRequest
@@ -14,22 +19,6 @@ SearchRequest
 
 GetRequest
 - index id: .ds-filebeat-8.4.0-2022.09.08-000001
-
-
-#### Ship data to Elasticsearch cluster
-- filestream inputs: 
-    - $PROJECT_HOME/spring-boot-websocketHandler/logs/*
-    - $PROJECT_HOME/server-client/logs/*
-
-
-#### Manage the stack in Java using Elasticsearch Clients
-- https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html
-
-
-#### Search logs from data streams' backing indices and System indices
-
-
-#### Track Pipeline usage
 
 
 #### Create visualizations
